@@ -1,0 +1,37 @@
+
+FAQ: CS2002 Logic Practical, 2023-2024
+======================================
+
+Q1. What do the symbols # and > mean?
+
+A1. # represents XOR and > represents implies (i.e. material implication).
+    This is explained in the practical spec so please read that carefully.  
+
+Q2. Can I use C standard library feature X? 
+
+A2. Yes, if it is in the C standard library, you may use it in your code.
+This applies if it is needed at link time, not just compile time
+
+Q3. Is it true that the number of variables in the first argument need not
+match with the number of variables in the formula given?
+
+A3. Yes.  The variables as defined by the spec are given by the number of the
+first argument.  So e.g. if this is 5 then the variables are abcde and your
+truth table should have 32 lines, even if some of the variables do not appear
+in the formula.  Note that if a variable is outside the range given in the
+first argument then it should trigger an error.  E.g. if the first argument is
+5, the formula should not contain any variable past e.
+
+Q4. Doesn't that mean that I might not be able to use mnemonic variables in
+the second part of the practical? 
+
+A4. Yes, if your encoding would be easiest with two variables q and z, you would
+probably want to rename them to a and b so your truth table would have 4 lines
+instead of millions. 
+
+Q5. In Part 2, am I right in thinking that I should describe in my report 
+how I convert the questions in Part 2 into two parameters needed by ttable, 
+and then input the converted parameters into ttable to present the result? 
+
+A5. Yes. Explain the encoding into logic in the report, then run the truth table 
+and explain how its results answer the question.
